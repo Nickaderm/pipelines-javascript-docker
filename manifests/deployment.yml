@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: nickadermpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nickadermpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: nickadermpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: nickadermpipelinesjavascriptdocker 
+          image: nagostinocontainerregistry.azurecr.io/nickadermpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
